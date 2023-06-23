@@ -1,22 +1,62 @@
 .buttonsContainer {
+    display: flex;
+    gap: 20px
+}
+
+.buttonsContainer button:nth-child(1),
+.buttonsContainer button:nth-child(2),
+.buttonsContainer button:nth-child(4)
+{
+    width: 120px;
+    height: 30px;
+}
+.buttonsContainer button:nth-child(3)
+{
+    width: 165px;
+    height: 30px;
 }
 
 .responseContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .imageContainer {
+    transition: .5s;
+}
+
+.imageContainer:hover {
+    transform: scale(1.03);
 }
 
 .image {
+    width: 400px;
+    height: 400px;
 }
 
 .textContainer{
+    display: flex;
+    flex-direction: column;
 }
 
 .code {
+    font-weight: 500;
+    font-size: 30px;
+    width: 500px;
 }
 
 .text {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 500px;
 }
 .info {
+    font-weight: 500;
+    font-size: 16px;
+    width: 500px;
 }
