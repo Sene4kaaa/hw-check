@@ -37,11 +37,28 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
-
+                setText(res.data.errorText)
+                setInfo(res.data.info)
             })
             .catch((e) => {
                 // дописать
+                setText(e?.response?.data?.errorText || e.message)
+                setInfo(e?.response?.data?.info || e.name)
 
+                switch (e.response.status) {
+                    case 400:
+                        setImage(error400);
+                        setCode('Ошибка 400!')
+                        break
+                    case 500:
+                        setImage(error500);
+                        setCode('Ошибка 500!')
+                        break
+                    default:
+                        setImage(errorUnknown);
+                        setCode('Error!')
+                        break
+                }
             })
     }
 
@@ -56,6 +73,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === '...loading'}
 
                     >
                         Send true
@@ -65,6 +83,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === '...loading'}
 
                     >
                         Send false
@@ -74,7 +93,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === '...loading'}
                     >
                         Send undefined
                     </SuperButton>
@@ -83,7 +102,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === '...loading'}
                     >
                         Send null
                     </SuperButton>
