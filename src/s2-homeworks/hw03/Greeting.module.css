@@ -1,35 +1,66 @@
 .greetingForm {
+
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    margin-top: 10px;
 }
 
 .error {
+    color: #cc0000;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .input {
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    width: 372px;
+    height: 36px;
+    padding: 7px 11px;
+    font-size: 16px;
+    flex-grow: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .input:focus {
+    background: #f6f6f8;
+    outline: none;
 }
 
 .errorInput {
+    border-color: #cc0000;
 }
 
 .button {
+    background: #0066CC;
+    width: 78px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+    margin-left: 12px;
+    color: white;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.5);
 }
 
 .button:focus {
+
 }
 
 .button:active {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .button:disabled {
+    opacity: 0.5;
 }
 
 .text {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
+
 }

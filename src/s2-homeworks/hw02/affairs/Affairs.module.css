@@ -1,23 +1,32 @@
 .buttonContainer {
     display: flex;
     gap: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .all {
     --color: #06c;
+    ---color: rgba(0, 102, 204, 0.05);
+    ----color: rgb(0, 102, 204, 0.9);
 }
 
 .low {
     --color: #0c2;
+    ---color: rgba(0, 204, 34, 0.05);
+    ----color: rgba(0, 204, 34, 0.9);
 }
 
 .high {
     --color: #c00;
+    ---color: rgba(204, 0, 0, 0.05);
+    ----color: rgba(204, 0, 0, 0.9);
 }
 
 .middle {
     --color: #cc9c00;
+    ---color: rgba(204, 156, 0, 0.05);
+    ----color: rgba(204, 156, 0, 0.9);
 }
 
 .button {
@@ -37,6 +46,10 @@
     cursor: pointer;
 }
 
+.button:hover {
+    background-color: var(---color);
+}
+
 .button:active {
     background: var(--color);
     color: white;
@@ -46,6 +59,11 @@
     background: var(--color);
     color: white;
 }
+
+.active:hover {
+    background: var(----color);
+}
+
 
 .affairs {
     display: flex;
