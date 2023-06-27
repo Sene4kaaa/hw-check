@@ -3,5 +3,7 @@
 }
 
 .loading {
-
+    width: 375px;
+    text-align: right;
+    color:#0059b2;
 }
