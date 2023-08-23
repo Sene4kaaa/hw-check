@@ -87,7 +87,7 @@ const HW15 = () => {
         // setPage(1) // при сортировке сбрасывать на 1 страницу
         setPage(1)
         // sendQuery(
-        sendQuery({sort: newSort, page, count })
+        sendQuery({sort: newSort, page, count})
 
         // setSearchParams(
         setSearchParams({page: `${page}`, count: `${count}`})
@@ -129,7 +129,6 @@ const HW15 = () => {
                     totalCount={totalCount}
                     onChange={onChangePagination}
                 />
-
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
                         tech-
