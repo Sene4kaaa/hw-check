@@ -13,22 +13,7 @@ import avatar from './avatar.png'
 * 5 - сделать стили в соответствии с дизайном
 * */
 
-// нужно создать правильный тип вместо any
-export type MessageType = {
-    id: number;
-    user: UserType;
-    message: MesType;
-}
 
-type UserType = {
-    avatar: string;
-    name: string;
-}
-
-type MesType = {
-    text: string;
-    time: string;
-}
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
@@ -69,6 +54,23 @@ const HW1 = () => {
             </div>
         </div>
     )
+}
+
+// нужно создать правильный тип вместо any
+export type MessageType = {
+    id: number;
+    user: UserType;
+    message: MesType;
+}
+
+type UserType = {
+    avatar: string;
+    name: string;
+}
+
+type MesType = {
+    text: string;
+    time: string;
 }
 
 export default HW1
