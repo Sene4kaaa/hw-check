@@ -21,11 +21,13 @@ export const message0: MessageType = {
         avatar: avatar, // можно менять
         name: 'Brad Pit',  // можно менять
     },
+
     message: {
         text: 'You did your homework?', // можно менять
         time: '15:00', // можно менять
     },
 }
+
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
