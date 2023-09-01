@@ -16,14 +16,6 @@ import s2 from '../../s1-main/App.module.css'
 * 11 - в файле Affair.tsx отобразить приходящие данные
 * */
 
-// types
-export type AffairPriorityType = 'low' | 'middle' | 'high'  //  need to fix any
-export type AffairType = {
-    _id: number // need to fix any
-    name: string // need to fix any
-    priority: AffairPriorityType
-}
-export type FilterType = 'all' | AffairPriorityType
 
 // constants
 const defaultAffairs: AffairType[] = [ // need to fix any
@@ -51,7 +43,7 @@ function HW2() {
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => { // need to fix any
         // need to fix
-        setAffairs(deleteAffair(affairs,_id))
+        setAffairs(deleteAffair(affairs, _id))
     }
 
     return (
@@ -68,5 +60,16 @@ function HW2() {
         </div>
     )
 }
+
+// types
+export type AffairPriorityType = 'low' | 'middle' | 'high'  //  need to fix any
+
+export type AffairType = {
+    _id: number // need to fix any
+    name: string // need to fix any
+    priority: AffairPriorityType
+}
+
+export type FilterType = 'all' | AffairPriorityType
 
 export default HW2
