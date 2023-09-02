@@ -16,7 +16,6 @@ import s2 from '../../s1-main/App.module.css'
 * 11 - в файле Affair.tsx отобразить приходящие данные
 * */
 
-
 // constants
 const defaultAffairs: AffairType[] = [ // need to fix any
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
@@ -31,8 +30,8 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
     if (filter === 'all') return affairs
     return affairs.filter(el => el.priority === filter) // need to fix
 }
-export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
 
+export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
     return affairs.filter(el => el._id != _id) // need to fix
 }
 
