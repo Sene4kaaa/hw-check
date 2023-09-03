@@ -3,13 +3,6 @@ import Affair from './affair/Affair'
 import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
-type AffairsPropsType = {
-    data: AffairType[] // need to fix any
-    setFilter: (filter: FilterType)=> void
-    deleteAffairCallback: (_id: number) => void
-    filter: FilterType
-}
-
 function Affairs(props: AffairsPropsType) {
     const setAll = () => {
         // need to fix
@@ -76,6 +69,13 @@ function Affairs(props: AffairsPropsType) {
             <div className={s.affairs}>{mappedAffairs}</div>
         </div>
     )
+}
+
+type AffairsPropsType = {
+    data: AffairType[] // need to fix any
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
+    filter: FilterType
 }
 
 export default Affairs
